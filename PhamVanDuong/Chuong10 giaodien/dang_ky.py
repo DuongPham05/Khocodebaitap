@@ -11,9 +11,7 @@ from PyQt6.QtCore import Qt
 from PyQt6 import uic
 
 
-# ─────────────────────────────────────────────────────────────
-# Cách 1: Load trực tiếp từ file .ui  (khuyến nghị khi dùng Qt Designer)
-# ─────────────────────────────────────────────────────────────
+
 class DangKyFormUI(QWidget):
     """Load giao diện từ file dang_ky.ui (Qt Designer)."""
 
@@ -75,9 +73,7 @@ class DangKyFormUI(QWidget):
         )
 
 
-# ─────────────────────────────────────────────────────────────
-# Cách 2: Xây dựng giao diện thuần bằng code (không cần file .ui)
-# ─────────────────────────────────────────────────────────────
+
 class DangKyFormCode(QWidget):
     """Xây dựng giao diện hoàn toàn bằng PyQt6 code."""
 
@@ -227,9 +223,7 @@ class DangKyFormCode(QWidget):
         )
 
 
-# ─────────────────────────────────────────────────────────────
-# Helpers dùng chung
-# ─────────────────────────────────────────────────────────────
+
 def _make_line_edit(placeholder: str) -> QLineEdit:
     le = QLineEdit()
     le.setPlaceholderText(placeholder)
@@ -263,9 +257,6 @@ def _validate_and_submit(
     )
 
 
-# ─────────────────────────────────────────────────────────────
-# Entry point
-# ─────────────────────────────────────────────────────────────
 def main():
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
